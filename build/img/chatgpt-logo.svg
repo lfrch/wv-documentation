@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">ChatGPT-inspired thinking mark</title>
+  <g fill="none" stroke="#10a37f" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 78c-34-28-84-23-112 11-18 22-22 52-12 78"/>
+    <path d="M132 167c-42 3-74 39-71 81 2 28 19 53 44 66"/>
+    <path d="M105 314c-18 38-2 83 36 101 26 13 57 11 81-5"/>
+    <path d="M222 421c34 28 84 23 112-11 18-22 22-52 12-78"/>
+    <path d="M380 345c42-3 74-39 71-81-2-28-19-53-44-66"/>
+    <path d="M407 198c18-38 2-83-36-101-26-13-57-11-81 5"/>
+    <path d="M256 78v178l-151 87"/>
+    <path d="M256 256l151-87"/>
+    <path d="M256 256v178"/>
+  </g>
+</svg>
