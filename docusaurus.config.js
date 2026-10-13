@@ -2,13 +2,13 @@
 const config = {
   title: 'wv-dokumentation',
   tagline: 'Dokumentation eines empirischen Projekts',
-  url: 'http://localhost',
-  baseUrl: '/',
+  url: 'https://lfrch.github.io',
+  baseUrl: '/wv-documentation/',
   staticDirectories: ['static'],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'wv',
+  organizationName: 'lfrch',
   projectName: 'wv-documentation',
   presets: [
     [

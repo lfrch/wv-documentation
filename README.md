@@ -8,6 +8,12 @@ Dieses Repository ist eine Docusaurus-Site zur Dokumentation eines empirischen P
 2. Die Website mit `npm start` starten.
 3. Die lokale Browser-Vorschau öffnen und die Indexseite zur Navigation verwenden.
 
+## GitHub Pages
+
+- Die Seite wird per GitHub Actions Workflow unter `.github/workflows/deploy-pages.yml` gebaut und veröffentlicht.
+- Ziel-URL: `https://lfrch.github.io/wv-documentation/`
+- Für die erste Veröffentlichung in GitHub unter **Settings → Pages** als Source **GitHub Actions** auswählen.
+
 ## Seitenstruktur
 
 - [Index](content/index.md)
