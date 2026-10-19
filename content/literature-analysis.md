@@ -7,7 +7,13 @@ sidebar_position: 4
 
 ## Vorgehen
 
-Fasse die relevanteste Literatur, zentrale Konzepte und Forschungslücken zusammen und vergleiche sie im Hinblick auf das Projekt.
+Die Literaturanalyse bildet die praktische Umsetzung des im [methodischen
+Rahmen](method) beschriebenen Forschungsdesigns. Die Recherche deckte vier
+Konzeptbereiche ab: *Conversational Systems*, *State Concepts*,
+*Transition Concepts* und *Transparency Concepts*. Aufgrund der uneinheitlichen
+Begriffsverwendung wurde die Suche auf fünf Suchstrings verteilt. So sollte
+vermieden werden, dass ein zu breiter Suchstring unpassende Treffer liefert
+oder ein zu enger Suchstring relevante Arbeiten ausschließt.
 
 ## Suchstrategie
 
@@ -64,6 +70,63 @@ Fasse die relevanteste Literatur, zentrale Konzepte und Forschungslücken zusamm
 	</div>
 </div>
 
+## Screening und Dokumentation
 
-## PRISMA
+Das Screening wurde zweistufig nach PRISMA durchgeführt: zunächst anhand von
+Titel und Abstract, anschließend im Volltext. Eingeschlossen wurde peer-reviewte
+Primärliteratur der letzten fünf Jahre, die Interaktionszustände,
+Zustandsübergänge oder Mechanismen der Zustandstransparenz in
+Conversational-AI-Systemen und Sprachagenten untersucht. Rein technische
+Beiträge ohne Fokus auf die Nutzerinteraktion wurden ausgeschlossen. Der
+Such- und Screeningprozess ergab einen Korpus von 51 Publikationen.
+
 ![PRISMA-Flussdiagramm](img/prisma.png)
+
+Jeder Datensatz und die daraus hervorgehenden Erkenntnisse wurden in einer
+strukturierten Tabelle dokumentiert. Erfasst wurden:
+
+| Feld | Inhalt |
+| --- | --- |
+| Referenz | Autorinnen und Autoren sowie Erscheinungsjahr |
+| Titel | Titel der Publikation |
+| Interaktionszustand | Untersuchter Zustand oder Zustandsübergang |
+| Merkmale | Identifizierte Eigenschaften des Zustandsübergangs |
+| Implikationen für HCI und Design | Folgerungen für Gestaltung und Interaktion |
+| Domäne | Anwendungskontext der Untersuchung |
+| Relevanz | Beitrag zur Beantwortung der Forschungsfragen |
+| Modalität(en) | Eingesetzte Interaktionsmodalitäten |
+| Publikationsart | Typ der Publikation |
+
+Die Tabelle diente nicht nur der Dokumentation einzelner Treffer, sondern auch
+der fortlaufenden Sicherung und Vergleichbarkeit neu entstehender Einsichten.
+
+## Kodierung und Synthese
+
+Die eingeschlossenen Arbeiten wurden induktiv codiert und in einer
+Konzeptmatrix nach Webster und Watson (2002) erfasst. Die beschriebenen
+Interaktionszustände und -übergänge wurden anschließend zu zehn thematisch
+ähnlichen Zustandsclustern verdichtet.
+
+Die Merkmale der Zustandsübergänge wurden in Anlehnung an Nickerson et al.
+empirisch-konzeptuell abgeleitet. Leitend war die Frage nach den Eigenschaften
+eines Übergangs und danach, ob und wie er für Nutzende sichtbar gemacht werden
+muss. Auf formale Abbruchbedingungen wurde verzichtet.
+
+Die Auswertung erfolgte entlang der drei Forschungsfragen:
+
+1. Für **RQ1** wurden die codierten Arbeiten zu Zustandsclustern verdichtet.
+2. Für **RQ1.1** wurden Merkmale der Zustandsübergänge abgeleitet und mit den
+   Zustandsclustern zu einer tabellarischen Taxonomie verbunden.
+3. Für **RQ1.2** wurden die Arbeiten anhand ihres Anwendungskontexts einer
+   induktiv abgeleiteten Domäne oder einer bereichsübergreifenden Kategorie
+   zugeordnet. Die Begründungen des Transparenzbedarfs je Domäne wurden
+   zusätzlich den Zustandsclustern aus RQ1 zugeordnet.
+
+## Ergebnisse der Synthese
+
+Die Literaturanalyse liefert eine konzeptzentrierte Synthese und eine
+Taxonomie, die Zustände, Übergänge, ihre Unterscheidungsmerkmale und den
+jeweils begründeten Transparenzbedarf in einem gemeinsamen Ordnungsrahmen
+zusammenführt. Damit werden die in der Forschung diskutierten Zustände und
+Übergänge systematisch vergleichbar und die Grundlage für
+kontextabhängige Transparenzentscheidungen geschaffen.

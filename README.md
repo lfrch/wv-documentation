@@ -17,17 +17,15 @@ Dieses Repository ist eine Docusaurus-Site zur Dokumentation eines empirischen P
 ## Seitenstruktur
 
 - [Index](content/index.md)
-- [Einführung ins Thema](content/introduction-to-topic.md)
 - [Methode](content/method.md)
 - [Literaturanalyse](content/literature-analysis.md)
-- [Ergebnisse](content/findings.md)
 - [Artefakte](content/artifacts.md)
+- [Ergebnisse](content/findings.md)
 
 ## Empfohlene Reihenfolge
 
 1. Mit der Indexseite für Überblick und Navigation beginnen.
-2. Die Einführung lesen, um Thema und Forschungskontext zu verstehen.
-3. Die Methodenseite nutzen, um die Durchführung der empirischen Arbeit nachzuvollziehen.
-4. Die Literaturanalyse lesen, um die Forschungslage einzuordnen.
-5. Zur Ergebnisse-Seite wechseln, um Resultate und Beobachtungen zu sehen.
-6. Begleitmaterial auf der Artefakte-Seite sammeln.
+2. Die Methodenseite nutzen, um die Durchführung der empirischen Arbeit nachzuvollziehen.
+3. Die Literaturanalyse lesen, um die Forschungslage einzuordnen.
+4. Zur Ergebnisse-Seite wechseln, um Resultate und Beobachtungen zu sehen.
+5. Begleitmaterial auf der Artefakte-Seite sammeln.
