@@ -5,41 +5,50 @@ sidebar_position: 5
 
 # Artefakte
 
-## Inhalt
-
-Sammle hier Abbildungen, Tabellen, Auszüge, Datensätze, Anhänge und andere unterstützende Materialien.
-
 ## Literaturauswertung und ergänzende Artefakte
+Die Taxonomie der Interaktionszustände und -übergänge ist das zentrale
+Ergebnis dieser Arbeit. Die folgenden Abschnitte dokumentieren den Weg zu
+ihrer Entwicklung, ergänzende Erkenntnisse aus der Literatursynthese sowie
+Praxisbeispiele, die zeigen, wie Zustandstransparenz in Conversational-AI-
+Systemen konkret umgesetzt werden kann. Die Taxonomie selbst ist der schriftlichen Arbeit zu entnehmen.
+
+Die ergänzenden Artefakte sind nach ihrer Funktion gegliedert: Zunächst werden
+die Ergebnisse der Literaturanalyse zusammengefasst. Darauf folgen die
+untersuchten Anwendungsdomänen, externe Gestaltungsperspektiven, Beispiele aus
+verbreiteten Werkzeugen sowie ausgewählte Ansätze und Prototypen aus der
+Literatur.
 
 <details>
 <summary><strong>Synthese: Zustandstransparenz (n=51)</strong></summary>
 
-Synthese der als **High** eingestuften Arbeiten des Literatur-Screenings (Ansicht Relevanz = High, aktueller Stand). Ausgerichtet an den Forschungsfragen: **RQ1** (relevante Interaktionszustände/-übergänge), **RQ1.1** (Merkmale zur Unterscheidung), **RQ1.2** (Domänen mit besonderer Ausprägung und Forschungs-/Anwendungspotenzial).
+**51 Paper im identifizierten Korpus** · **10 Zustands-Cluster**
 
-**51 High-Paper** · **10 Zustands-Cluster**
+### Querbefunde über alle Cluster
 
-## Querbefunde über alle Cluster
+#### Gemeinsamkeiten
 
-**Gemeinsamkeiten**
+| Gemeinsamer Befund | Einordnung und Belege |
+| --- | --- |
+| Transparenz ist zu dosieren, nicht zu maximieren. | Ein kontextabhängiges „Goldilocks"-Niveau hängt von Aufgabe, Expertise und kognitiver Last ab (Pareek, Chromik & Butz, Becker & Fischer; konzeptioneller Rahmen: Liao & Vaughan). |
+| Sichtbare interne Prozesse und Zustände können Verständnis und Vertrauen fördern. | Dazu zählen CoT, Reasoning Traces, Actions, Rationale, Quellen und interne Nutzermodelle; entsprechende Befunde finden sich bei Ebrahimi, Chang, Brachman, He, Chen, Cox sowie Gao & Sang. |
+| Die Wirkung sichtbaren „Denkens" ist kontextabhängig. | Die Sichtbarkeit wirkt in nicht-produktiven bzw. sensiblen Kontexten eher förderlich, bei Produktiv- und Effizienzaufgaben dagegen abgeschwächt oder kontraproduktiv (Gao & Sang, Cox, Do). |
+| Unsicherheits-, Konfidenz- und Fehlertransparenz sind zentrale Ansatzpunkte. | Sie können Over-Reliance reduzieren und kalibriertes Vertrauen unterstützen (Kim 2024, Steyvers, von Reeken, Dey, Tutul). |
+| Bestimmte Zustandsübergänge kehren in mehreren Arbeiten wieder. | Dazu gehören der Moduswechsel TOD ↔ ODD, der Übergang von reaktiv zu proaktiv sowie der Übergang vom Dialog zur Tool-Ausführung; diese Übergänge werden system-initiiert, sollen aber nachvollziehbar bleiben. |
+| Vertrauen ist ein kalibrierbarer und zustandsabhängiger Wert. | Vertrauen kann mit Fehlern, Kontingenz und der Anzeige von Unsicherheit steigen oder fallen. |
 
-- Transparenz ist zu dosieren, nicht zu maximieren — kontextabhängiges „Goldilocks"-Niveau je Aufgabe, Expertise und kognitiver Last (Pareek, Chromik & Butz, Becker & Fischer; konzeptioneller Rahmen: Liao & Vaughan).
-- Sichtbare interne Prozesse und Zustände (CoT, Reasoning Traces, Actions, Rationale, Quellen, internes Nutzermodell) steigern Verständnis, Vertrauen und wahrgenommene Anthropomorphie (Ebrahimi, Chang, Brachman, He, Chen, Cox, Gao & Sang).
-- Sichtbares „Denken" wirkt jedoch kontextabhängig: förderlich in nicht-produktiven bzw. sensiblen Kontexten, abgeschwächt oder kontraproduktiv bei Produktiv-/Effizienzaufgaben (Gao & Sang, Cox, Do).
-- Unsicherheits-, Konfidenz- und Fehlertransparenz als zentraler Hebel gegen Over-Reliance und für kalibriertes Vertrauen (Kim 2024, Steyvers, von Reeken, Dey, Tutul).
-- Wiederkehrende Zustandsübergänge: Moduswechsel TOD↔ODD, reaktiv→proaktiv, Dialog→Tool-Ausführung — system-initiiert, aber nachvollziehbar.
-- Vertrauen als kalibrierbarer, zustandsabhängiger Wert, der mit Fehlern, Kontingenz und Unsicherheitsanzeige steigt oder fällt.
+#### Unterschiede
 
-**Unterschiede**
+| Unterschiedsdimension | Ausprägungen und Beispiele |
+| --- | --- |
+| Zustandsbegriff | Explizite Modelle wie FSM, Stateful Orchestration und Dialogmodi stehen impliziten bzw. relationalen Zuständen wie Common Ground, mentalen Modellen und Vertrauen gegenüber. |
+| Methodik | Das Korpus umfasst technische System- und Benchmark-Beiträge, empirische Nutzerstudien sowie Reviews und konzeptionelle Frameworks. |
+| Wirkung von Transparenz | Dieselbe Prozesssichtbarkeit fördert teilweise kalibriertes Vertrauen, kann aber auch Over-Reliance begünstigen (He, Ebrahimi) oder kontraproduktiv wirken (Do). |
+| Transparenzobjekt | Untersucht werden unter anderem Reasoning, Fähigkeiten, Datennutzung, Herkunft und Quellen, Turn-Taking-Timing, interne Nutzermodelle (Chen) sowie die Verlagerung von Nutzer-Agency (Wu & Yao). |
+| Sichtbarkeit und Kalibrierung | Neben der Sichtbarkeit rückt zunehmend die Kalibrierung in den Mittelpunkt: die Lücke zwischen tatsächlicher Modellkonfidenz und wahrgenommener Zuverlässigkeit (Steyvers) sowie die sprachliche Kommunikation von Unsicherheit (Kim 2024). |
 
-- Zustandsbegriff variiert: explizite Modelle (FSM, stateful orchestration, Dialogmodi) vs. implizite/relationale Zustände (Common Ground, mentale Modelle, Vertrauen).
-- Methodik: technische System-/Benchmark-Beiträge vs. empirische Nutzerstudien vs. Reviews/konzeptionelle Frameworks.
-- Wirkung uneinheitlich: dieselbe Prozesssichtbarkeit fördert teils kalibriertes Vertrauen, teils Over-Reliance (He, Ebrahimi) oder wirkt kontraproduktiv (Do).
-- Transparenz-Objekt unterschiedlich: Reasoning, Fähigkeiten, Datennutzung, Herkunft/Quellen, Turn-Taking-Timing, internes Nutzermodell (Chen) oder die Verlagerung von Nutzer-Agency (Wu & Yao).
-- Zunehmend rückt neben der Sichtbarkeit auch die **Kalibrierung** ins Zentrum: die Lücke zwischen tatsächlicher Modellkonfidenz und wahrgenommener Zuverlässigkeit (Steyvers) und die sprachliche Kommunikation von Unsicherheit (Kim 2024).
+### Tabellarische Synthese – Interaktionszustände und -übergänge
 
-## Tabellarische Synthese - Interaktionszustände & -übergänge
-
-### 1. Dialogmodus-Wechsel (TOD ↔ ODD)  (3 Paper)
+#### 01 · Dialogmodus-Wechsel (TOD ↔ ODD) (3 Paper)
 
 | Arbeit | Zustände & Übergänge (transparent zu machen) | Systemische / UI-Merkmale | Gemeinsamkeiten | Unterschiede |
 | --- | --- | --- | --- | --- |
@@ -47,7 +56,7 @@ Synthese der als **High** eingestuften Arbeiten des Literatur-Screenings (Ansich
 | **Liu et al. (2023)** — System-Initiated Mode Transitions | TOD- und Chit-Chat-Zustand; Fokus auf system-initiierte Übergänge und die Initiative beim Moduswechsel – impliziter Einstieg über Task-Themen sowie Wechsel zu Small Talk nach Informationsübergabe. | Proaktiv generierte Übergangssätze via Prompt-Modelle lösen die Moduswechsel aus; zwei definierte Wechselszenarien für flüssige, natürliche Übergänge, auch in Multi-Domain-Settings. | Teilt mit Young und Zhao die TOD/ODD-Vereinigung und das Ziel natürlicher Moduswechsel. | Isoliert gezielt die bislang kaum erforschte System-Initiative beim Wechsel und erzeugt Übergänge über generierte Übergangssätze. |
 | **Zhao et al. (2022)** — UniDS: Unified Dialogue System | Chit-Chat (ODD) und aufgabenorientiert (TOD) als Interaktionszustände in einem einheitlichen System; Ziel ist ein natürlicherer Wechsel zwischen Plaudern und Aufgabenerfüllung innerhalb einer Konversation. | Einheitliches Framework bewältigt beide Modi ohne zusätzliche Parameter, trainiert auf gemischten Dialogdaten; keine separaten Systeme nötig. | Teilt mit Young und Liu (2023) das Ziel, TOD und ODD zu vereinen für flüssigere Mensch-Agent-Interaktion. | Betont die parameterfreie Vereinheitlichung in einem einzigen Modell, trainiert auf gemischten Dialogdaten. |
 
-## 02 · Proaktivität, Initiative & Turn-Taking  (6 Paper)
+#### 02 · Proaktivität, Initiative & Turn-Taking (6 Paper)
 
 | Arbeit | Zustände & Übergänge (transparent zu machen) | Systemische / UI-Merkmale | Gemeinsamkeiten | Unterschiede |
 | --- | --- | --- | --- | --- |
@@ -58,7 +67,7 @@ Synthese der als **High** eingestuften Arbeiten des Literatur-Screenings (Ansich
 | **Kuang et al. (2024)** — Proaktive UX-Evaluation & Timing | Übergang vom passiven zum vorschlagenden System; proaktive, systeminitiierte Dialogzustände mit automatischen Vorschlägen zu drei Zeitpunkten (davor, synchron, danach) relativ zu erkannten Usability-Problemen. | Systeminitiierte Vorschläge mit variiertem Timing als Designvariable; Vorschläge nach dem Problem bevorzugt, steigern Vertrauen und Effizienz. | Teilt mit Liu (2025), Lee und Deng die Relevanz von Timing und wahrgenommener Kompetenz proaktiver Initiative. | Empirischer Vergleich dreier Timing-Bedingungen; Vorschläge nach dem Problem optimal, menschliche Expertise bleibt unersetzlich. |
 | **Brandt et al. (2023)** — Conversation Analysis für VUIs | Rückt Turn-Taking, Sequenzorganisation und die interaktive Herstellung von Gesprächszuständen in den Fokus; kritisiert skriptbasiertes Design und plädiert für an realer Interaktion orientierte Dialoginfrastruktur. | Konversationsanalyse natürlicher Gesprächssequenzen des Einsatzkontexts als empirische Grundlage für naturalistische Turn-Taking- und Sequenzgestaltung. | Teilt mit Kim den Fokus auf naturalistisches Turn-Taking und Sequenzorganisation in Sprachschnittstellen. | Methodischer Beitrag: Konversationsanalyse statt skriptbasiertem VUI-Design als Gestaltungsgrundlage. |
 
-## 03 · Prozess- & Reasoning-Sichtbarkeit / sichtbares Denken (CoT, Reasoning Traces, interne Zustände)  (7 Paper)
+#### 03 · Prozess- und Reasoning-Sichtbarkeit / sichtbares Denken (CoT, Reasoning Traces, interne Zustände) (7 Paper)
 
 | Arbeit | Zustände & Übergänge (transparent zu machen) | Systemische / UI-Merkmale | Gemeinsamkeiten | Unterschiede |
 | --- | --- | --- | --- | --- |
@@ -70,7 +79,7 @@ Synthese der als **High** eingestuften Arbeiten des Literatur-Screenings (Ansich
 | **Cox et al. (2026)** — Watching AI Think | Sichtbarer „Thinking"-/Reflexionszustand vor der Antwort (None vs. emotional- vs. expertise-unterstützend); wertorientierte Reflexion signalisiert Absicht/Haltung des Systems – kontextabhängig (Habit- vs. Feelings-bezogene Anliegen). | 3×2-Experiment in Help-Seeking-Dialogen; Sichtbarkeit und Framing des „Denkens" prägen Empathie, Wärme und Kompetenz, während None unengagiert wirkt. | Teilt mit Gao & Sang und Chen das Sichtbarmachen des „Denkens"/interner Prozesse und dessen kontextabhängige Wirkung. | Fokus auf sensible Help-Seeking-Dialoge und wertorientierte statt deduktiver Reflexion. |
 | **Gao und Sang (2026)** — Effekt sichtbaren CoT | Sichtbar gemachter Reasoning-/CoT-Zustand vor der finalen Antwort (angezeigt vs. nicht); Übergang vom reinen Output zum sichtbaren Denkprozess. | 2×2×2-Experiment; sichtbares CoT erhöht wahrgenommenen Anthropomorphismus und darüber Einstellung und Weiternutzung – jedoch kontextmoderiert. | Teilt mit Cox und Ebrahimi die Wirkung sichtbaren Reasonings auf Wahrnehmung und Nutzung. | Zeigt die Kontextgrenze: förderlich bei nicht-produktiven, abgeschwächt bei produktiven Aufgaben (Media Evocation statt Media Equation). |
 
-## 04 · Explizite Zustandsmodelle & Dialogue Management (FSM, stateful orchestration, Dialogfluss-Design)  (4 Paper)
+#### 04 · Explizite Zustandsmodelle und Dialogue Management (FSM, stateful orchestration, Dialogfluss-Design) (4 Paper)
 
 | Arbeit | Zustände & Übergänge (transparent zu machen) | Systemische / UI-Merkmale | Gemeinsamkeiten | Unterschiede |
 | --- | --- | --- | --- | --- |
@@ -79,7 +88,7 @@ Synthese der als **High** eingestuften Arbeiten des Literatur-Screenings (Ansich
 | **Valtolina et al. (2021)** — Visuelle Dialogfluss-Gestaltung | Explizit visuell repräsentierter Dialogfluss macht Zustände und Transitionen der Konversation sichtbar; adressiert Prozesstransparenz auf Gestaltungsebene, indem Intents, Aktionen, Entitäten und Parameter visuell spezifiziert werden. | Visuelle Entwicklungsumgebung, in der Domänenexperten Dialogflüsse ohne tiefe Programmierkenntnisse gestalten; automatische Übersetzung nach DialogFlow. | Teilt mit Rateria, Brabra und Wu die explizite Zustands-/Transitionsmodellierung für sichtbare Interaktionszustände. | Zielt auf Gestaltende (Domänenexperten) und senkt die Einstiegshürde über eine visuelle No-/Low-Code-Modellierungsumgebung. |
 | **Wu et al. (2023)** — PROMISE: Stateful Prompt Orchestration | Modelliert Konversationen explizit über State-Machine-Konzepte: hierarchisch verschachtelte Zustände und Übergänge steuern modellgetrieben die dynamische Prompt-Orchestrierung und machen komplexe Dialogverläufe kontrollierbar und nachvollziehbar. | State-Machine-Modellierung für LLM-Verhalten, hierarchisch verschachtelte Zustände/Übergänge, modellgetriebene Prompt-Orchestrierung inkl. mitgelieferter Default-UIs. | Teilt mit Rateria und Valtolina die explizite State-Machine-/Zustandsstruktur zur transparenten Dialogsteuerung. | Wendet State-Machine-Modellierung auf LLM-Prompt-Orchestrierung an (persuasive Interaktionen, z. B. Gesundheitsinformationssysteme). |
 
-## 05 · Automatisierung vs. Kontrolle & Nutzer-Autonomie (Tool-Calling, Agency)  (3 Paper)
+#### 05 · Automatisierung vs. Kontrolle und Nutzer-Autonomie (Tool-Calling, Agency) (3 Paper)
 
 | Arbeit | Zustände & Übergänge (transparent zu machen) | Systemische / UI-Merkmale | Gemeinsamkeiten | Unterschiede |
 | --- | --- | --- | --- | --- |
@@ -87,7 +96,7 @@ Synthese der als **High** eingestuften Arbeiten des Literatur-Screenings (Ansich
 | **Wang & Wang (2026)** — User-Autonomy Scoping Review | Untersucht, wie Nutzer-Autonomie in der Mensch-LLM-Interaktion konzeptualisiert und operationalisiert wird, da automations-zentrierte Frameworks die Komplexität nicht erfassen; Ziel ist Empowerment statt Entmachtung/Kontrollverlust. | Identifiziert fünf Kategorien mit zwölf Design-Mechanismen zur Unterstützung selbstbestimmter LLM-Interaktion. | Teilt mit Hennekeuser und Wu & Yao das Anliegen, Kontrolle/Autonomie gegen reine Automatisierung zu wahren. | Review-Beitrag: denkt Autonomie über die automations-zentrierte Sicht hinaus und liefert zwölf Design-Mechanismen in fünf Kategorien. |
 | **Wu & Yao (2026)** — After the Interface: Agency-Verlagerung | Nutzer-Agency schwindet nicht, sondern verlagert sich – vom Interface hin zu Zielartikulation, Output-Bewertung und Ergebnis-Aushandlung; Kontrolle als Diagnoselinse (Prozess- vs. Ergebniskontrolle). | Konzeptioneller Rahmen; plausible, aber unverifizierbare Outputs machen Ergebniskontrolle ohne Prozesssichtbarkeit illusorisch. | Teilt mit Hennekeuser und Wang & Wang den Fokus auf Kontrolle/Autonomie statt reiner Automatisierung. | Rahmt Agency als verlagert statt verloren und verknüpft Kontrolle explizit mit Prozesstransparenz bei unverifizierbaren Outputs. |
 
-## 06 · Capability-/Mental-Model-Kommunikation & Theory of Mind  (4 Paper)
+#### 06 · Capability-/Mental-Model-Kommunikation und Theory of Mind (4 Paper)
 
 | Arbeit | Zustände & Übergänge (transparent zu machen) | Systemische / UI-Merkmale | Gemeinsamkeiten | Unterschiede |
 | --- | --- | --- | --- | --- |
@@ -96,7 +105,7 @@ Synthese der als **High** eingestuften Arbeiten des Literatur-Screenings (Ansich
 | **Wang et al. (2025)** — ToMinHAI: Mutual Theory of Mind | Wechselseitige Zuschreibung mentaler Zustände (Intentionen, Ziele, Emotionen) zwischen Mensch und CUI im Paradigma Mutual Theory of Mind; beide Seiten interpretieren iterativ die internen Zustände des Gegenübers. | CUIs sollen interne Zustände sichtbar machen und mentale Modelle beider Seiten wechselseitig kalibrieren für sozial abgestimmte Kommunikation. | Teilt mit Reimann und Brachman den Fokus auf Sichtbarkeit/Kalibrierung mentaler Modelle. | Workshop-Beitrag zur wechselseitigen (mutual) ToM – beidseitige, iterative Zustandsinterpretation statt einseitiger Fähigkeitskommunikation. |
 | **Do et al. (2023)** — Inform, Explain, or Control | Kalibrierung von Erwartungen an einen moderierenden Agenten, der unterbeteiligte Gruppenmitglieder erkennt; Nutzer sollen den Detektionszustand und die Leistungsfähigkeit des Agenten korrekt verstehen. | Vergleich dreier Transparenzmechanismen – Information (Genauigkeitsangabe), Erklärung (Algorithmus/Daten-Überblick) und Kontrolle (Anpassbarkeit); Erklärung am wirksamsten. | Teilt mit Reimann und Brachman die Kalibrierung von Erwartungen/mentalen Modellen über Transparenzmechanismen. | Zeigt Rangfolge der Mechanismen: Erklärung senkt Verlegenheit und erhöht Verständnis; Information senkte Beiträge, Kontrolle wirkte negativer. |
 
-## 07 · Dialogische Erklärungen & XAI-Design (Conversational XAI)  (11 Paper)
+#### 07 · Dialogische Erklärungen und XAI-Design (Conversational XAI) (11 Paper)
 
 | Arbeit | Zustände & Übergänge (transparent zu machen) | Systemische / UI-Merkmale | Gemeinsamkeiten | Unterschiede |
 | --- | --- | --- | --- | --- |
@@ -112,7 +121,7 @@ Synthese der als **High** eingestuften Arbeiten des Literatur-Screenings (Ansich
 | **Polleti et al. (2025)** — Knowledge-aware CRS-Erklärungen | Erklärungen für wissensbasierte dialogische Empfehlungssysteme; Transparenz über die Empfehlungsgrundlage als expliziter Erklärmechanismus, ausbalancierte Argumente für und gegen eine Empfehlung zur Vertrauenskalibrierung. | Wissensgraph mit Embeddings, Plausibilitäts-Score zur Begründungserzeugung, ausbalancierte Pro-/Contra-Argumente nach Snedegars For/Against-Theorie. | Teilt mit Guo und Wilkinson die Erklärung von Empfehlungen zur Transparenz-/Vertrauenssteigerung. | Nutzt Wissensgraph-Embeddings und liefert bewusst ausbalancierte Gegenargumente (For/Against) zur Interpretierbarkeit. |
 | **Wilkinson et al. (2021)** — Justification Styles (Why/Why not) | Kein Übergangsmodell; prüft, wie Begründungsstile (Warum vs. Warum nicht) in einem Film-Empfehlungschatbot die wahrgenommene Systemtransparenz und damit Kontrolle, Vertrauen und Folgebereitschaft beeinflussen. | Warum- vs. Warum-nicht-Begründungen als Erklärungsmechanismus; Warum-Begründungen erhöhen Transparenz, wahrgenommene Kontrolle und Vertrauensüberzeugungen. | Teilt mit Guo, Polleti und Hernandez-Bocanegra die dialogische Erklärung von Empfehlungen zur Vertrauens-/Transparenzsteigerung. | Online-Experiment (n=310) isoliert den Begründungsstil als Design-Hebel; Warum-Erklärungen wirksamer als Warum-nicht. |
 
-## 08 · Vertrauenskalibrierung, Over-Reliance & Unsicherheits-/Fehlertransparenz  (9 Paper)
+#### 08 · Vertrauenskalibrierung, Over-Reliance und Unsicherheits-/Fehlertransparenz (9 Paper)
 
 | Arbeit | Zustände & Übergänge (transparent zu machen) | Systemische / UI-Merkmale | Gemeinsamkeiten | Unterschiede |
 | --- | --- | --- | --- | --- |
@@ -126,14 +135,14 @@ Synthese der als **High** eingestuften Arbeiten des Literatur-Screenings (Ansich
 | **von Reeken et al. (2025)** — Calibrated Trust in RAG | Kalibriertes Vertrauen in Retrieval-Augmented-Konversationen; sichtbar gemacht werden Retrieval-Herkunft und Systemunsicherheit, damit der Antwort-/Retrieval-Zustand nachvollziehbar wird – gegen Überschätzung nicht prüfbarer Antworten unter Zeitdruck. | Farbcodierte Quellenzitate, nicht-numerische Relevanzsignale und kontextsensible Sprache zur Kommunikation von Systemunsicherheit (Co-Design-Workshops). | Teilt mit Dey und Tutul das Sichtbarmachen von Unsicherheit/Herkunft für kalibriertes Vertrauen. | Liefert konkrete UI-Mechanismen (farbcodierte Zitate, nicht-numerische Relevanz) speziell für RAG-Konversationen im Arbeitskontext. |
 | **Ng und Zhang (2025)** — Trust-in-Chatbots-Review | Kein diskretes Zustandsmodell; Vertrauen als dynamischer, zustandsabhängiger Wert (provisorisches swift trust, das sich über Folgeinteraktionen verstärkt oder abschwächt), systematisiert über fünf Prädiktor-Gruppen. | Fünf Faktor-Gruppen (nutzer-, maschinen-, interaktions-, sozial-, kontextbezogen); interaktions- und kontextbezogene Faktoren besonders einschlägig für Zustandstransparenz. | Teilt mit Becker & Fischer und Marconi den Review-Ansatz zu Vertrauensfaktoren und -dynamik. | Betont Vertrauensdynamik (swift trust) und ruft nach Längsschnittstudien; strukturiert Prädiktoren in fünf Gruppen. |
 
-## 09 · Common Ground, geteiltes Verständnis & Identität  (2 Paper)
+#### 09 · Common Ground, geteiltes Verständnis und Identität (2 Paper)
 
 | Arbeit | Zustände & Übergänge (transparent zu machen) | Systemische / UI-Merkmale | Gemeinsamkeiten | Unterschiede |
 | --- | --- | --- | --- | --- |
 | **Tolzin und Janson (2023)** — Common-Ground-Mechanismen | Kein diskretes Zustandsmodell; Common Ground als Mechanismus, der abgestimmte, nachvollziehbare Mensch-Agent-Interaktion herstellt und aktualisiert und gegen typische Interaktionsfehler abgesichert werden muss. | Fünf Mechanismen – Embodiment, soziale Merkmale, Joint Action, Wissensbasis und mentales Modell des Agenten – mit gerichteten/bidirektionalen Beziehungen (nomologisches Netz). | Teilt mit Ivarsson den Fokus auf geteiltes Verständnis/Verständnissicherung als Grundlage tragfähiger Interaktion. | Systematisches Review (38 Artikel) mit fünf Grounding-Mechanismen als Orientierungsrahmen für Gestaltung und Forschung. |
 | **Ivarsson et al. (2023)** — Suspicious Minds: Identität & Vertrauen | Zustand der Ungewissheit über die Identität des Partners (Mensch vs. KI): wird Verdacht geweckt, bricht das geteilte Verstehen zusammen; im Zentrum stehen Folgen für Vertrauen und Verständnissignale. | Ethnomethodologisch-konversationsanalytische Analyse; Empfehlung, den Agentenstatus transparent zu signalisieren, um Verdacht und Vertrauensbrüche zu vermeiden. | Teilt mit Tolzin & Janson den Fokus auf Herstellung/Zusammenbruch geteilten Verstehens in der Mensch-Agent-Interaktion. | Fokus auf Identitäts-Ungewissheit (Mensch vs. KI) als Auslöser von Verdacht und Grounding-Zusammenbruch. |
 
-## 10 · Verhaltens-/Datentransparenz & Darstellungsdynamik (Plattform/UI)  (2 Paper)
+#### 10 · Verhaltens-/Datentransparenz und Darstellungsdynamik (Plattform/UI) (2 Paper)
 
 | Arbeit | Zustände & Übergänge (transparent zu machen) | Systemische / UI-Merkmale | Gemeinsamkeiten | Unterschiede |
 | --- | --- | --- | --- | --- |
@@ -143,20 +152,123 @@ Synthese der als **High** eingestuften Arbeiten des Literatur-Screenings (Ansich
 </details>
 
 <details>
-<summary><strong>Domänen & potentielle Use Cases</strong></summary>
+<summary><strong>Prototypische Ansätze aus der Literatur</strong></summary>
 
-| Anwendungsbereich | Arbeiten | Transparenzbedarf | Zustandscluster | Gemeinsamkeiten | Unterschiede / Begründung |
-| --- | ---: | --- | --- | --- | --- |
-| **Bereichsübergreifend** | 32 | Nicht domänenspezifisch; untersucht grundlegende Transparenzmechanismen und Zustandsübergänge. | – | Die Beiträge behandeln domänenneutrale Fragen wie Dialogmodi, Proaktivität, Reasoning-Sichtbarkeit, Fähigkeitenkommunikation und Common Ground. | Die hohe Zahl zeigt, dass viele Erkenntnisse zunächst konzeptionell oder technisch bleiben. Die Übertragung der Merkmale auf konkrete Nutzungskontexte bleibt eine zentrale Aufgabe. |
-| **Wissensarbeit und Unternehmenskontext** | 6 | Kontrolle bei der Delegation von Aufgaben, Vermeidung von Kontrollverlust sowie Umgang mit Überlastung und kognitiver Belastung. | 2, 3, 4, 6, 8 | Transparenz wird an Automatisierungs- und Kontrollpunkten relevant, insbesondere bei Toolaufrufen, Delegation und zustandsbehafteter Orchestrierung. | Im Vordergrund stehen Steuerbarkeit und die Begrenzung von Übervertrauen bzw. Überlastung; damit unterscheidet sich der Bereich von stärker akzeptanzorientierten Anwendungskontexten. |
-| **Vertrieb und Kundenservice** | 6 | Verständlichkeit und Akzeptanz der Interaktion sowie ein natürlicher Gesprächsverlauf. | 1, 3, 7 | Transparenz soll den Dialogfluss unterstützen und die Interaktion nachvollziehbar machen, ohne ihn unnötig zu unterbrechen. | Im Vergleich zu Hochrisikokontexten stehen weniger Fehlerkritikalität und mehr Gesprächsqualität, Akzeptanz und Vertrauen im Vordergrund. |
-| **Gesundheitswesen und Wohlbefinden** | 4 | Fehlerkritikalität, Nachvollziehbarkeit, Dialogablauf und angemessenes Vertrauen. | 2, 5 | Transparenz unterstützt die Kontrolle über potenziell folgenreiche Ausgaben und hilft, Systemgrenzen und Unsicherheit einzuordnen. | Der erhöhte Transparenzbedarf ergibt sich aus den möglichen direkten Folgen fehlerhafter Ausgaben; ein für andere Bereiche ausreichendes Transparenzniveau kann hier unzureichend sein. |
-| **Medien und Kommunikation** | 3 | Angemessene Einschätzung der Systemkompetenz. | 10 | Transparenz betrifft insbesondere die Einordnung von Herkunft, Genauigkeit und Darstellungsform systemgenerierter Inhalte. | Der Schwerpunkt liegt auf der Einschätzung kommunikativer Verlässlichkeit und Kompetenz, nicht primär auf der Kontrolle von Toolaufrufen oder Entscheidungen. |
+Die folgenden Beispiele veranschaulichen konkrete Forschungsansätze und
+Prototypen, in denen Zustandstransparenz technisch oder gestalterisch
+umgesetzt wird.
+
+### TalkTuner
+
+**Prototype:** [TalkTuner – A dashboard UI for chatbot LLMs](https://yc015.github.io/TalkTuner-a-dashboard-ui-for-chatbot-llm/)
+
+**Video / Demo:** [TalkTuner-Demo auf der Projektseite](https://yc015.github.io/TalkTuner-a-dashboard-ui-for-chatbot-llm/)
+
+TalkTuner macht das interne Nutzermodell eines Chatbots sichtbar und steuerbar. Das Dashboard zeigt, welche Merkmale das LLM aus dem Gespräch über die Nutzerin oder den Nutzer ableitet, und ermöglicht es, diese Repräsentationen gezielt zu korrigieren oder zu verändern. Chen et al. (2024) zeigen damit einen konkreten Ansatz, Interpretierbarkeit mit User-Experience-Design zu verbinden und Transparenz sowie Nutzerkontrolle in Conversational AI zu stärken.
+
+<figure>
+	<img src="/img/dashboard_overview_v8.png" alt="TalkTuner dashboard showing the chatbot conversation, user model, and controllable profile attributes" />
+	<figcaption> Abbildung 2: TalkTuner dashboard overview.</figcaption>
+</figure>
+
+**Referenz:** Chen, Y., Wu, A., DePodesta, T., Yeh, C., Li, K., Castillo Marin, N., Patel, O., Riecke, J., Raval, S., Seow, O., Wattenberg, M., et al. (2024). *TalkTuner: A dashboard UI for chatbot LLMs*. [Projektseite](https://yc015.github.io/TalkTuner-a-dashboard-ui-for-chatbot-llm/).
+
+<hr />
+
+### Gent
+
+Brachman et al. (2025) untersuchen anhand des agentischen Systems „Gent“, welche mentalen Modelle Nutzende von einem solchen KI-Chatbot entwickeln und welche Informationen sie über dessen Funktionsweise erhalten möchten. Gent zerlegt komplexe Probleme in eine Folge von Aktionen, liefert für jede Aktion eine Begründung, greift auf externe Informationen zu und nennt die verwendeten Quellen. Die Ergebnisse zeigen zugleich, dass diese sichtbaren Schritte allein nicht ausreichen, damit Nutzende die zugrunde liegenden generativen und agentischen Abläufe angemessen verstehen.
+
+<figure>
+	<img src="/wv-documentation/img/iui25-2-fig1.jpg" alt="Gent agentic AI chatbot showing the decomposition of a complex problem into actions" />
+	<figcaption>Abbildung 3: Gent – Zerlegung eines komplexen Problems in einzelne Aktionen.</figcaption>
+</figure>
+
+<figure>
+	<img src="/wv-documentation/img/iui25-2-fig2.jpg" alt="Gent agentic AI chatbot showing action rationales, external information, and cited sources" />
+	<figcaption>Abbildung 4: Gent – Aktionen, Begründungen, externe Informationen und Quellenangaben.</figcaption>
+</figure>
+
+**Referenz:** Brachman, M., Kunde, S., Miller, S., Fucs, A., Dempsey, S., Jabbour, J., & Geyer, W. (2025). *Building Appropriate Mental Models: What Users Know and Want to Know about an Agentic AI Chatbot*. In *30th International Conference on Intelligent User Interfaces (IUI ’25)*, March 24–27, 2025, Cagliari, Italy. ACM, New York, NY, USA, 18 pages. [https://doi.org/10.1145/3708359.3712071](https://doi.org/10.1145/3708359.3712071)
+
+<hr />
+
+### Criticality
+
+Criticality (Chang et al., 2026) operationalisiert den Paul-Elder-Rahmen für kritisches Denken. Interaktive Elements of Thought wie Ziel, Annahmen, Perspektiven und Implikationen werden mit Intellectual Standards wie Klarheit, Fairness und Logik strukturiert. Für jede Behauptung wird Evidenz abgerufen, als stützend, neutral oder widersprüchlich klassifiziert und die Verbindung zwischen Behauptung und Evidenz erklärt.
+
+<figure>
+	<img src="/img/iui26-18-fig1.jpg" alt="Criticality guidance loop with reasoning traces, elements of thought, intellectual standard evaluation, evidence retrieval, and guidance recommendations" />
+	<figcaption>Abbildung 1: Criticality guidance loop</figcaption>
+</figure>
+
+<figure>
+	<img src="/img/iui26-18-fig7.jpg" alt="Criticality interface showing interactive elements of thought, evidence, and reasoning guidance" />
+	<figcaption>Abbildung 7: Criticality interface</figcaption>
+</figure>
+
+**Referenz:** Chang, M., Srinivasan, A., & Palani, S. (2026). *Criticality: Scaffolding Decision-Making with Interactive Critical Thinking and Evidence-Based Reasoning Traces*. In *31st International Conference on Intelligent User Interfaces (IUI '26)*, March 23–26, 2026, Paphos, Cyprus. ACM, New York, NY, USA, 21 pages. [https://doi.org/10.1145/3742413.3789077](https://doi.org/10.1145/3742413.3789077)
+
+<hr />
+
+### Inner Thoughts Framework
+
+Das Inner Thoughts Framework (Liu et al., 2025) stattet KI mit einem kontinuierlichen, verdeckten Gedankenstrom parallel zur sichtbaren Kommunikation aus. Über die Modellierung intrinsischer Motivation kann das System proaktiv passende Beiträge initiieren. Die Umsetzung in einer Web-App und einem Chatbot übertrifft in technischer Evaluation und Nutzerstudien bestehende Baselines bei Anthropomorphie, Kohärenz, Intelligenz und Angemessenheit des Turn-Takings.
+
+**Verfügbarkeit:** Die frühere Projektseite [liubruce.me/inner_thoughts](https://www.liubruce.me/inner_thoughts) ist nicht mehr verfügbar.
+
+<figure>
+	<img src="/img/chi25-674-fig3.jpg" alt="Inner Thoughts framework with a continuous covert train of thoughts running in parallel to overt communication" />
+	<figcaption> Abbildung 3: Inner Thoughts framework.</figcaption>
+</figure>
+
+<figure>
+	<img src="/img/chi25-674-fig6.jpg" alt="Inner Thoughts system interface for proactive conversational agents" />
+	<figcaption>Abbildung 6: Inner Thoughts system interface.</figcaption>
+</figure>
+
+**Referenz:** Liu, X. B., Fang, S., Shi, W., Wu, C.-S., Igarashi, T., & Chen, X. A. (2025). *Proactive Conversational Agents with Inner Thoughts*. In *CHI Conference on Human Factors in Computing Systems (CHI '25)*, April 26–May 01, 2025, Yokohama, Japan. ACM, New York, NY, USA, 19 pages. [https://doi.org/10.1145/3706598.3713760](https://doi.org/10.1145/3706598.3713760)
+
+<hr />
+
+### Visuelle Dialogfluss-Gestaltung
+
+Valtolina und Neri (2021) beschreiben eine visuelle Entwicklungsumgebung auf Basis von Draw.io, mit der Domänenexperten Dialogflüsse ohne Programmierkenntnisse gestalten. Intents, Kontexte und API-Aufrufe werden grafisch modelliert; eine Node.js-Engine verarbeitet die XML-Dateien und erzeugt über die DialogFlow-API funktionsfähige Bots. Damit wird eine End-User-Development-Strategie für Conversational Interfaces umgesetzt.
+
+**Referenz:** Valtolina, S., & Neri, L. (2021). *Visual design of dialogue flows for conversational interfaces*. *Behaviour & Information Technology*, *40*(10), 1008–1023. [https://doi.org/10.1080/0144929X.2021.1918249](https://doi.org/10.1080/0144929X.2021.1918249)
+
+<hr />
+
+### PROMISE
+
+PROMISE (Wu et al., 2023) unterstützt komplexe sprachbasierte Interaktionen mit Informationssystemen. State-Machine-Konzepte ermöglichen eine modellgetriebene, dynamische Prompt-Orchestrierung über hierarchisch verschachtelte Zustände und Übergänge und verbessern so die Kontrolle über das Verhalten von Sprachmodellen.
+
+**Projekt:** [PROMISE auf GitHub](https://github.com/zhaw-iwi/promise)
+
+**Referenz:** Wu, W., Heierli, J., Meisterhans, M., Moser, A., Färber, A., Dolata, M., ... & Schwabe, G. (2023). *Promise: A framework for developing complex conversational interactions (technical report)*. *arXiv preprint arXiv:2312.03699*.
+
+<hr />
 
 </details>
 
 <details>
-<summary><strong> AI Powertool Provider Statements</strong></summary>
+<summary><strong>Domänen und Transparenzbedarf</strong></summary>
+
+Die folgende Übersicht ordnet die Arbeiten nach ihrem Anwendungskontext und
+stellt den jeweils begründeten Transparenzbedarf gegenüber.
+
+| Anwendungsbereich | Arbeiten | Transparenzbedarf | Gemeinsamkeiten | Unterschiede / Begründung |
+| --- | ---: | --- | --- | --- |
+| **Bereichsübergreifend** | 32 | Nicht domänenspezifisch; untersucht grundlegende Transparenzmechanismen und Zustandsübergänge. | Die Beiträge behandeln domänenneutrale Fragen wie Dialogmodi, Proaktivität, Reasoning-Sichtbarkeit, Fähigkeitenkommunikation und Common Ground. | Die hohe Zahl zeigt, dass viele Erkenntnisse zunächst konzeptionell oder technisch bleiben. Die Übertragung der Merkmale auf konkrete Nutzungskontexte bleibt eine zentrale Aufgabe. |
+| **Wissensarbeit und Unternehmenskontext** | 6 | Kontrolle bei der Delegation von Aufgaben, Vermeidung von Kontrollverlust sowie Umgang mit Überlastung und kognitiver Belastung. | Transparenz wird an Automatisierungs- und Kontrollpunkten relevant, insbesondere bei Toolaufrufen, Delegation und zustandsbehafteter Orchestrierung. | Im Vordergrund stehen Steuerbarkeit und die Begrenzung von Übervertrauen bzw. Überlastung; damit unterscheidet sich der Bereich von stärker akzeptanzorientierten Anwendungskontexten. |
+| **Vertrieb und Kundenservice** | 6 | Verständlichkeit und Akzeptanz der Interaktion sowie ein natürlicher Gesprächsverlauf. | Transparenz soll den Dialogfluss unterstützen und die Interaktion nachvollziehbar machen, ohne ihn unnötig zu unterbrechen. | Im Vergleich zu Hochrisikokontexten stehen weniger Fehlerkritikalität und mehr Gesprächsqualität, Akzeptanz und Vertrauen im Vordergrund. |
+| **Gesundheitswesen und Wohlbefinden** | 4 | Fehlerkritikalität, Nachvollziehbarkeit, Dialogablauf und angemessenes Vertrauen. | Transparenz unterstützt die Kontrolle über potenziell folgenreiche Ausgaben und hilft, Systemgrenzen und Unsicherheit einzuordnen. | Der erhöhte Transparenzbedarf ergibt sich aus den möglichen direkten Folgen fehlerhafter Ausgaben; ein für andere Bereiche ausreichendes Transparenzniveau kann hier unzureichend sein. |
+| **Medien und Kommunikation** | 3 | Angemessene Einschätzung der Systemkompetenz. | Transparenz betrifft insbesondere die Einordnung von Herkunft, Genauigkeit und Darstellungsform systemgenerierter Inhalte. | Der Schwerpunkt liegt auf der Einschätzung kommunikativer Verlässlichkeit und Kompetenz, nicht primär auf der Kontrolle von Toolaufrufen oder Entscheidungen. |
+
+</details>
+
+<details>
+<summary><strong>Perspektiven und Standpunkte aus der Praxis</strong></summary>
 
 Praktische Perspektiven und Handlungsansätze führender AI-Anbieter zur Transparenzvermittlung in konversativen Systemen:
 
@@ -204,6 +316,10 @@ Der Anthropic Transparency Hub dokumentiert Sicherheitsbewertungen, Systemkarten
 
 
 ## Beispiele aus verbreiteten Tools
+
+Die folgenden Beispiele zeigen, wie verbreitete Werkzeuge Zustände,
+Verarbeitungsschritte und Übergänge für Nutzende sichtbar machen. Sie dienen
+als praktische Ergänzung zur konzeptzentrierten Literatursynthese.
 
 * Visible Thinking wird in vielen Tools durch ein animiertes Icon (häufig eigenes Logo), mit Denken assoziierten Verben oder ähnliches umgesetzt
 * CoT wird in vielen CAI Systemen und gängigen AI Tools eingesetzt, um die Transparenz zu erhöhen und v.a. aber den sog. First-Answer-Bias zu minimieren
@@ -319,71 +435,3 @@ Der Anthropic Transparency Hub dokumentiert Sicherheitsbewertungen, Systemkarten
 		</figcaption>
 	</figure>
 </div>
-
-## Ansätze und Prototypen aus der Literatur
-
-### TalkTuner
-
-**Prototype:** [TalkTuner – A dashboard UI for chatbot LLMs](https://yc015.github.io/TalkTuner-a-dashboard-ui-for-chatbot-llm/)
-
-**Video / Demo:** [TalkTuner-Demo auf der Projektseite](https://yc015.github.io/TalkTuner-a-dashboard-ui-for-chatbot-llm/)
-
-**In a nutshell:** TalkTuner macht das interne Nutzermodell eines Chatbots sichtbar und steuerbar. Das Dashboard zeigt, welche Merkmale das LLM aus dem Gespräch über die Nutzerin oder den Nutzer ableitet, und ermöglicht es, diese Repräsentationen gezielt zu korrigieren oder zu verändern. Chen et al. (2024) zeigen damit einen konkreten Ansatz, Interpretierbarkeit mit User-Experience-Design zu verbinden und Transparenz sowie Nutzerkontrolle in Conversational AI zu stärken.
-
-<figure>
-	<img src="/img/dashboard_overview_v8.png" alt="TalkTuner dashboard showing the chatbot conversation, user model, and controllable profile attributes" />
-	<figcaption> Abbildung 2: TalkTuner dashboard overview.</figcaption>
-</figure>
-
-**Referenz:** Chen, Y., Wu, A., DePodesta, T., Yeh, C., Li, K., Castillo Marin, N., Patel, O., Riecke, J., Raval, S., Seow, O., Wattenberg, M., et al. (2024). *TalkTuner: A dashboard UI for chatbot LLMs*. [Projektseite](https://yc015.github.io/TalkTuner-a-dashboard-ui-for-chatbot-llm/).
-
-**Abbildung:** Figure 2 zeigt das Dashboard mit dem in Echtzeit sichtbaren User Model. [Projektseite](https://bit.ly/talktuner-project-page)
-
-### Criticality
-
-**In a nutshell:** Criticality (Chang et al., 2026) operationalisiert den Paul-Elder-Rahmen für kritisches Denken. Interaktive Elements of Thought wie Ziel, Annahmen, Perspektiven und Implikationen werden mit Intellectual Standards wie Klarheit, Fairness und Logik strukturiert. Für jede Behauptung wird Evidenz abgerufen, als stützend, neutral oder widersprüchlich klassifiziert und die Verbindung zwischen Behauptung und Evidenz erklärt.
-
-<figure>
-	<img src="/img/iui26-18-fig1.jpg" alt="Criticality guidance loop with reasoning traces, elements of thought, intellectual standard evaluation, evidence retrieval, and guidance recommendations" />
-	<figcaption>Abbildung 1: Criticality guidance loop</figcaption>
-</figure>
-
-<figure>
-	<img src="/img/iui26-18-fig7.jpg" alt="Criticality interface showing interactive elements of thought, evidence, and reasoning guidance" />
-	<figcaption>Abbildung 7: Criticality interface</figcaption>
-</figure>
-
-**Referenz:** Chang, M., Srinivasan, A., & Palani, S. (2026). *Criticality: Scaffolding Decision-Making with Interactive Critical Thinking and Evidence-Based Reasoning Traces*. In *31st International Conference on Intelligent User Interfaces (IUI '26)*, March 23–26, 2026, Paphos, Cyprus. ACM, New York, NY, USA, 21 pages. [https://doi.org/10.1145/3742413.3789077](https://doi.org/10.1145/3742413.3789077)
-
-### Inner Thoughts Framework
-
-**In a nutshell:** Das Inner Thoughts Framework (Liu et al., 2025) stattet KI mit einem kontinuierlichen, verdeckten Gedankenstrom parallel zur sichtbaren Kommunikation aus. Über die Modellierung intrinsischer Motivation kann das System proaktiv passende Beiträge initiieren. Die Umsetzung in einer Web-App und einem Chatbot übertrifft in technischer Evaluation und Nutzerstudien bestehende Baselines bei Anthropomorphie, Kohärenz, Intelligenz und Angemessenheit des Turn-Takings.
-
-**Verfügbarkeit:** Die frühere Projektseite [liubruce.me/inner_thoughts](https://www.liubruce.me/inner_thoughts) ist nicht mehr verfügbar.
-
-<figure>
-	<img src="/img/chi25-674-fig3.jpg" alt="Inner Thoughts framework with a continuous covert train of thoughts running in parallel to overt communication" />
-	<figcaption> Abbildung 3: Inner Thoughts framework.</figcaption>
-</figure>
-
-<figure>
-	<img src="/img/chi25-674-fig6.jpg" alt="Inner Thoughts system interface for proactive conversational agents" />
-	<figcaption>Abbildung 6: Inner Thoughts system interface.</figcaption>
-</figure>
-
-**Referenz:** Liu, X. B., Fang, S., Shi, W., Wu, C.-S., Igarashi, T., & Chen, X. A. (2025). *Proactive Conversational Agents with Inner Thoughts*. In *CHI Conference on Human Factors in Computing Systems (CHI '25)*, April 26–May 01, 2025, Yokohama, Japan. ACM, New York, NY, USA, 19 pages. [https://doi.org/10.1145/3706598.3713760](https://doi.org/10.1145/3706598.3713760)
-
-### Visuelle Dialogfluss-Gestaltung
-
-**In a nutshell:** Valtolina und Neri (2021) beschreiben eine visuelle Entwicklungsumgebung auf Basis von Draw.io, mit der Domänenexperten Dialogflüsse ohne Programmierkenntnisse gestalten. Intents, Kontexte und API-Aufrufe werden grafisch modelliert; eine Node.js-Engine verarbeitet die XML-Dateien und erzeugt über die DialogFlow-API funktionsfähige Bots. Damit wird eine End-User-Development-Strategie für Conversational Interfaces umgesetzt.
-
-**Referenz:** Valtolina, S., & Neri, L. (2021). *Visual design of dialogue flows for conversational interfaces*. *Behaviour & Information Technology*, *40*(10), 1008–1023. [https://doi.org/10.1080/0144929X.2021.1918249](https://doi.org/10.1080/0144929X.2021.1918249)
-
-### PROMISE
-
-**In a nutshell:** PROMISE (Wu et al., 2023) unterstützt komplexe sprachbasierte Interaktionen mit Informationssystemen. State-Machine-Konzepte ermöglichen eine modellgetriebene, dynamische Prompt-Orchestrierung über hierarchisch verschachtelte Zustände und Übergänge und verbessern so die Kontrolle über das Verhalten von Sprachmodellen.
-
-**Projekt:** [PROMISE auf GitHub](https://github.com/zhaw-iwi/promise)
-
-**Referenz:** Wu, W., Heierli, J., Meisterhans, M., Moser, A., Färber, A., Dolata, M., ... & Schwabe, G. (2023). *Promise: A framework for developing complex conversational interactions (technical report)*. *arXiv preprint arXiv:2312.03699*.
-

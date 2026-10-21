@@ -72,15 +72,35 @@ oder ein zu enger Suchstring relevante Arbeiten ausschließt.
 
 ## Screening und Dokumentation
 
-Das Screening wurde zweistufig nach PRISMA durchgeführt: zunächst anhand von
-Titel und Abstract, anschließend im Volltext. Eingeschlossen wurde peer-reviewte
-Primärliteratur der letzten fünf Jahre, die Interaktionszustände,
-Zustandsübergänge oder Mechanismen der Zustandstransparenz in
-Conversational-AI-Systemen und Sprachagenten untersucht. Rein technische
-Beiträge ohne Fokus auf die Nutzerinteraktion wurden ausgeschlossen. Der
-Such- und Screeningprozess ergab einen Korpus von 51 Publikationen.
+Die Literaturrecherche erfolgte in Web of Science, der ACM Digital Library,
+SpringerLink und IEEE Xplore und wurde von vornherein auf Publikationen der
+letzten fünf Jahre beschränkt; der Suchzeitraum endete am 20.08.2026. Die
+Dokumentation des Auswahlprozesses folgt dem PRISMA-Flussdiagramm (Abbildung
+1).
 
-![PRISMA-Flussdiagramm](img/prisma.png)
+![PRISMA-Flussdiagramm](img/prisma-aktuell-211026.png)
+<figcaption>Abbildung 1: PRISMA-Flussdiagramm des Literaturauswahlprozesses.</figcaption>
+
+Insgesamt wurden 618 Treffer identifiziert (Web of Science: 249, ACM
+Digital Library: 254, SpringerLink: 74, IEEE Xplore: 41). Nach Entfernung von
+zehn Duplikaten (sechs zwischen ACM Digital Library und Web of Science, vier
+zwischen IEEE Xplore und den übrigen Datenbanken) sowie acht weiteren
+Datensätzen aus sonstigen Gründen (falscher Dokumenttyp: n = 5, nicht
+empirisch: n = 2, Sprache: n = 1) verblieben 600 Datensätze für das
+Screening. Im Titel- und Abstract-Screening wurden 350 Arbeiten als
+fachfremd ausgeschlossen, da sie Conversational AI rein technisch oder
+algorithmisch evaluierten. Die übrigen 250 Arbeiten wurden im Volltext auf
+Eligibilität geprüft; alle Volltexte waren verfügbar. Ausgeschlossen wurden
+207 Arbeiten anhand von vier Kriterien: keine Zustandstransparenz (n = 146),
+verminderte Relevanz im Vergleich zum Hauptkorpus (n = 33), veraltete
+Übersichtsarbeiten (n = 16) und eine zu spezifische Zielgruppe (n = 12).
+Aus der Datenbanksuche gingen somit 43 Arbeiten (250 − 207) in den Korpus ein.
+Ergänzend wurden über eine Zitationssuche (Research Rabbit) 17 und über Websites drei weitere
+Quellen identifiziert. Die Websites schieden als Nicht-Primärliteratur aus.
+Von den 17 Quellen aus der Zitationssuche waren drei nicht abrufbar; von den
+verbleibenden 14 wurden sechs wegen verminderter Relevanz ausgeschlossen.
+Damit kamen acht Arbeiten (14 − 6) hinzu und der finale Korpus umfasst 51
+Publikationen (43 + 8).
 
 Jeder Datensatz und die daraus hervorgehenden Erkenntnisse wurden in einer
 strukturierten Tabelle dokumentiert. Erfasst wurden:
