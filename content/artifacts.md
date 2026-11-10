@@ -321,8 +321,13 @@ Die folgenden Beispiele zeigen, wie verbreitete Werkzeuge Zustände,
 Verarbeitungsschritte und Übergänge für Nutzende sichtbar machen. Sie dienen
 als praktische Ergänzung zur konzeptzentrierten Literatursynthese.
 
-* Visible Thinking wird in vielen Tools durch ein animiertes Icon (häufig eigenes Logo), mit Denken assoziierten Verben oder ähnliches umgesetzt
-* CoT wird in vielen CAI Systemen und gängigen AI Tools eingesetzt, um die Transparenz zu erhöhen und v.a. aber den sog. First-Answer-Bias zu minimieren
+* **Sichtbares Denken** wird meist über ein animiertes Icon, häufig das eigene Logo, oder über Statusverben wie „Denkt nach“ signalisiert. Inhalte des Reasonings erscheinen, wenn überhaupt, als eingeklappte Zusammenfassung, die Nutzende bei Bedarf öffnen können
+* **Chain-of-Thought** verbessert vor allem die Antwortqualität bei mehrstufigen Aufgaben. Transparenz für Nutzende entsteht eher nebenbei, da die Tools in der Regel nur eine Zusammenfassung des Denkprozesses anzeigen
+* **Toolnutzung und Pläne** werden als laufende Statuszeilen oder vorab erstellte Arbeitspläne sichtbar. Ausdrückliche Bestätigungen verlangen die Tools vor allem bei Aktionen mit Außenwirkung, etwa bei Terminalbefehlen
+* **Ergebnis- und Herkunftstransparenz** sind weit verbreitet: Änderungen erscheinen als Diff oder direkt im Artefakt, Aussagen werden mit Quellen verknüpft. Kontextbezogene Unsicherheitssignale sind dagegen selten und werden meist durch einen generischen Fehlerhinweis ersetzt
+* **Moduswechsel** gehen in der Praxis überwiegend von den Nutzenden aus, etwa über Schalter für Denk- oder Recherchemodi. Die Literatur untersucht dagegen vor allem systeminitiierte Wechsel
+* **Inkrementelle Textausgabe** ist Standard und macht den Verarbeitungszustand fortlaufend sichtbar 
+
 
 <div className="artifact-process" aria-label="Prozess der sichtbaren Zustände">
 	<span><b>●</b> Zustand</span>
